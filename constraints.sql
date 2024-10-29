@@ -56,7 +56,7 @@ ALTER TABLE Student
 ADD CONSTRAINT Con6
 UNIQUE (AccessNo);
 
-
+#To do:
 #Default 
 #string limitations: reg no & case types
 
