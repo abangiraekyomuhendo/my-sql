@@ -60,4 +60,5 @@ UNIQUE (AccessNo);
 #Default 
 #string limitations: reg no & case types
 #views
+# Normalization
 
