@@ -1,0 +1,67 @@
+
+CREATE DATABASE classroom_ucu;
+
+USE classroom_ucu;
+
+-- course table
+CREATE TABLE course (
+    course_code INT,
+    course_name VARCHAR(100),
+    course_year INT,
+    semester INT,
+    credit_units INT,
+    course_program VARCHAR(100)
+);
+
+-- Insert courses into the course table
+INSERT INTO course (course_code, course_name, course_year, semester, credit_units, course_program) VALUES
+(101, 'Stats', 1, 1, 3, 'Data Science'),
+(102, 'Structured', 1, 1, 4, 'Computer Science'),
+(103, 'Intro to Law', 1, 1, 3, 'Law');
+
+CREATE VIEW view_student_c2
+AS SELECT course_name, course_year, semester, course_program
+FROM course
+WHERE course_program = "Data Science" OR course_program = "Computer Science"
+
+SELECT *FROM view_student_c2;
+
+CREATE VIEW dept
+AS SELECT * FROM course
+WHERE course_program IN ('Data Science', 'Computer Science', 'BSIT')
+
+-- SELECT * FROM Customers
+-- WHERE Country IN ('Germany', 'France', 'UK');
+
+CREATE VIEW ar
+AS SELECT * FROM course
+
+SELECT * FROM AR;
+
+INSERT INTO AR VALUES (1, 'Test', 1, 2, 3, 'Try');
+SELECT * FROM AR;
+
+UPDATE AR
+
+
+
+
+--WHAT A DB IS, WHERE IT APPLIES, WHAT IT DOES, EVIDENCE OF ITS USE, DB SSYSTEMS, WHAT ETHER ARE, HOW THEY WOR, ARCHITECTURES, HOW WE CHOOSE WHAT TO USE, THE ACCESS MODE (ANSISPARC), THE DIFF LEVELS, WHO ACCESS, WHAT THEY ARE, HOW THEY INTERCONNECT, USE THEM TO EXPLAIN VIEWS AND ACCESS, TO EXPLAIN PHYSICAL AND LOGICAL INDEPENDENCE (USE THE ASNISPACR), APPREICATE WHAT ENTITIES ARE, WHAT ATTRIBUTES ARE, DESIGN A DB USING AN ERD
+    --SPECIFY NAKES, PK, R'SHIP AMONG ENTITIES, FKS, multiplicity to support databse/business rules
+    -- develop the db in mysql, know whcih db you are operating under, create tables, insert data, full records, null values, retrieve data from our tables, particular and all columns...return all records not just some ("where"). Use conditions like between, the in operator
+    -- like keyword
+    -- use the update structure...must bet a where clause
+    -- make change to the table structure (alter)
+    -- rename the column
+    -- get rid of data and tables from our DB table
+    -- remove records (delete keyord)
+    -- constraints 
+
+
+
+--tomorrow's test
+
+
+
+---final proejct
+    --implement views 
